@@ -1,0 +1,69 @@
+{
+  "run_id": "run_7cabfd97",
+  "session_id": "test",
+  "timestamp": "2026-09-18T07:03:41.474601+00:00",
+  "user_query": "What is the refund period?",
+  "status": "FAIL",
+  "errors": [],
+  "context_engineering": {
+    "original_tokens": 6,
+    "final_tokens": 7,
+    "recent_messages": 0,
+    "old_messages": 0,
+    "summary_generated": false,
+    "historical_matches": 0,
+    "messages_removed": 0,
+    "compression_ratio": -0.167,
+    "budget": 6000
+  },
+  "retrieval": {
+    "query": "What is the refund period?",
+    "top_k": 3,
+    "documents": [
+      {
+        "source": "refund_policy_v1.md",
+        "text": "# Refund policy v1\nRefunds may be requested within 30 days of purchase. Contact support with your order number.\n",
+        "score": 0.5
+      },
+      {
+        "source": "refund_policy_v2.md",
+        "text": "# Refund policy v2\nRefunds may be requested within 14 days of purchase. Contact support with your order number.\n",
+        "score": 0.5
+      }
+    ],
+    "mode": "pinecone",
+    "latency_ms": 0.92,
+    "pinecone_index": "glassbox"
+  },
+  "llm_calls": [
+    {
+      "answer": "The available sources conflict: refund_policy_v1.md says 30 days; refund_policy_v2.md says 14 days.",
+      "model": "offline-fallback",
+      "provider_error": null,
+      "input_tokens": 110,
+      "output_tokens": 19,
+      "total_tokens": 129,
+      "latency_ms": 0.12,
+      "cost": 2.79e-05,
+      "mode": "offline-fallback"
+    }
+  ],
+  "validation": {
+    "grounded": false,
+    "evidence_count": 2,
+    "unsupported_claims": [],
+    "conflicts": [
+      {
+        "source_a": "refund_policy_v1.md",
+        "claim_a": "30 days",
+        "source_b": "refund_policy_v2.md",
+        "claim_b": "14 days"
+      }
+    ],
+    "status": "FAIL"
+  },
+  "metrics": {
+    "latency_ms": 8.24
+  },
+  "final_answer": "The available sources conflict: refund_policy_v1.md says 30 days; refund_policy_v2.md says 14 days."
+}

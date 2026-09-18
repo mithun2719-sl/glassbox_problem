@@ -1,0 +1,66 @@
+{
+  "run_id": "run_164d5e3a",
+  "session_id": "test",
+  "timestamp": "2026-09-18T06:51:18.224487+00:00",
+  "user_query": "What is the refund policy?",
+  "status": "PASS",
+  "errors": [],
+  "context_engineering": {
+    "original_tokens": 6,
+    "final_tokens": 7,
+    "recent_messages": 0,
+    "old_messages": 0,
+    "summary_generated": false,
+    "historical_matches": 0,
+    "messages_removed": 0,
+    "compression_ratio": -0.167,
+    "budget": 6000
+  },
+  "retrieval": {
+    "query": "What is the refund policy?",
+    "top_k": 3,
+    "documents": [
+      {
+        "source": "security_policy.md",
+        "text": "# Security policy\nCustomer data is encrypted in transit using TLS and at rest using AES-256. Security incidents should be reported to security@example.com.\n",
+        "score": 0.4
+      },
+      {
+        "source": "refund_policy_v1.md",
+        "text": "# Refund policy v1\nRefunds may be requested within 30 days of purchase. Contact support with your order number.\n",
+        "score": 0.4
+      },
+      {
+        "source": "support_policy.md",
+        "text": "# Support policy\nSupport is available Monday through Friday. Priority customers receive a response within one business day.\n",
+        "score": 0.4
+      }
+    ],
+    "mode": "local-demo",
+    "latency_ms": 2.15,
+    "pinecone_index": null
+  },
+  "llm_calls": [
+    {
+      "answer": "Based on the available evidence: Customer data is encrypted in transit using TLS and at rest using AES-256. Security incidents should be reported to security@example.com. Refunds may be requested within 30 days of purchase. Contact support with your order number.",
+      "model": "offline-fallback",
+      "input_tokens": 145,
+      "output_tokens": 51,
+      "total_tokens": 196,
+      "latency_ms": 0.15,
+      "cost": 1.13e-05,
+      "mode": "offline-fallback"
+    }
+  ],
+  "validation": {
+    "grounded": true,
+    "evidence_count": 3,
+    "unsupported_claims": [],
+    "conflicts": [],
+    "status": "PASS"
+  },
+  "metrics": {
+    "latency_ms": 14.92
+  },
+  "final_answer": "Based on the available evidence: Customer data is encrypted in transit using TLS and at rest using AES-256. Security incidents should be reported to security@example.com. Refunds may be requested within 30 days of purchase. Contact support with your order number."
+}

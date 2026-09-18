@@ -1,0 +1,52 @@
+{
+  "run_id": "run_146f94ec",
+  "session_id": "test",
+  "timestamp": "2026-09-18T06:54:15.277564+00:00",
+  "user_query": "What language does the project use?",
+  "status": "FAIL",
+  "errors": [],
+  "context_engineering": {
+    "original_tokens": 145,
+    "final_tokens": 175,
+    "recent_messages": 6,
+    "old_messages": 14,
+    "summary_generated": true,
+    "historical_matches": 1,
+    "messages_removed": 13,
+    "compression_ratio": -0.207,
+    "budget": 6000
+  },
+  "retrieval": {
+    "query": "What language does the project use?",
+    "top_k": 3,
+    "documents": [],
+    "mode": "local-demo",
+    "latency_ms": 0.96,
+    "pinecone_index": null
+  },
+  "llm_calls": [
+    {
+      "answer": "I don't have enough evidence in the available knowledge base to answer that reliably.",
+      "model": "offline-fallback",
+      "input_tokens": 227,
+      "output_tokens": 17,
+      "total_tokens": 244,
+      "latency_ms": 0.09,
+      "cost": 1.27e-05,
+      "mode": "offline-fallback"
+    }
+  ],
+  "validation": {
+    "grounded": false,
+    "evidence_count": 0,
+    "unsupported_claims": [
+      "No supporting evidence"
+    ],
+    "conflicts": [],
+    "status": "FAIL"
+  },
+  "metrics": {
+    "latency_ms": 8.29
+  },
+  "final_answer": "I don't have enough evidence in the available knowledge base to answer that reliably."
+}

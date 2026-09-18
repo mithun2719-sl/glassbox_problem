@@ -1,0 +1,59 @@
+{
+  "run_id": "run_42c4095f",
+  "session_id": "failure-lab",
+  "timestamp": "2026-09-18T07:00:16.989457+00:00",
+  "user_query": "What will the company's revenue be in 2030?",
+  "status": "FLAGGED",
+  "errors": [],
+  "context_engineering": {
+    "original_tokens": 226,
+    "final_tokens": 319,
+    "recent_messages": 6,
+    "old_messages": 10,
+    "summary_generated": true,
+    "historical_matches": 10,
+    "messages_removed": 6,
+    "compression_ratio": -0.412,
+    "budget": 6000
+  },
+  "retrieval": {
+    "query": "What will the company's revenue be in 2030?",
+    "top_k": 3,
+    "documents": [],
+    "mode": "pinecone",
+    "latency_ms": 1.76,
+    "pinecone_index": "glassbox"
+  },
+  "llm_calls": [
+    {
+      "answer": "I don't have enough evidence in the available knowledge base to answer that reliably.",
+      "model": "offline-fallback",
+      "provider_error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+      "input_tokens": 371,
+      "output_tokens": 17,
+      "total_tokens": 388,
+      "latency_ms": 211.69,
+      "cost": 1.99e-05,
+      "mode": "offline-fallback"
+    }
+  ],
+  "validation": {
+    "grounded": false,
+    "evidence_count": 0,
+    "unsupported_claims": [
+      "No supporting evidence"
+    ],
+    "conflicts": [],
+    "status": "FAIL"
+  },
+  "metrics": {
+    "input_tokens": 371,
+    "output_tokens": 17,
+    "total_tokens": 388,
+    "cost": 1.99e-05,
+    "latency_ms": 224.37,
+    "retrieval_calls": 1,
+    "llm_calls": 1
+  },
+  "final_answer": "I don't have enough evidence in the available knowledge base to answer that reliably."
+}

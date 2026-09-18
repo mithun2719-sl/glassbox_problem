@@ -1,0 +1,73 @@
+{
+  "run_id": "run_55ad01b5",
+  "session_id": "test",
+  "timestamp": "2026-09-18T06:51:50.385066+00:00",
+  "user_query": "What is the refund policy?",
+  "status": "FAIL",
+  "errors": [],
+  "context_engineering": {
+    "original_tokens": 6,
+    "final_tokens": 7,
+    "recent_messages": 0,
+    "old_messages": 0,
+    "summary_generated": false,
+    "historical_matches": 0,
+    "messages_removed": 0,
+    "compression_ratio": -0.167,
+    "budget": 6000
+  },
+  "retrieval": {
+    "query": "What is the refund policy?",
+    "top_k": 3,
+    "documents": [
+      {
+        "source": "refund_policy_v1.md",
+        "text": "# Refund policy v1\nRefunds may be requested within 30 days of purchase. Contact support with your order number.\n",
+        "score": 1.0
+      },
+      {
+        "source": "refund_policy_v2.md",
+        "text": "# Refund policy v2\nRefunds may be requested within 14 days of purchase. Contact support with your order number.\n",
+        "score": 1.0
+      },
+      {
+        "source": "security_policy.md",
+        "text": "# Security policy\nCustomer data is encrypted in transit using TLS and at rest using AES-256. Security incidents should be reported to security@example.com.\n",
+        "score": 0.5
+      }
+    ],
+    "mode": "local-demo",
+    "latency_ms": 1.05,
+    "pinecone_index": null
+  },
+  "llm_calls": [
+    {
+      "answer": "Based on the available evidence: Refunds may be requested within 30 days of purchase. Contact support with your order number. Refunds may be requested within 14 days of purchase. Contact support with your order number.",
+      "model": "offline-fallback",
+      "input_tokens": 146,
+      "output_tokens": 40,
+      "total_tokens": 186,
+      "latency_ms": 0.09,
+      "cost": 1.05e-05,
+      "mode": "offline-fallback"
+    }
+  ],
+  "validation": {
+    "grounded": true,
+    "evidence_count": 3,
+    "unsupported_claims": [],
+    "conflicts": [
+      {
+        "source_a": "refund_policy_v1.md",
+        "claim_a": "30 days",
+        "source_b": "refund_policy_v2.md",
+        "claim_b": "14 days"
+      }
+    ],
+    "status": "FAIL"
+  },
+  "metrics": {
+    "latency_ms": 12.35
+  },
+  "final_answer": "Based on the available evidence: Refunds may be requested within 30 days of purchase. Contact support with your order number. Refunds may be requested within 14 days of purchase. Contact support with your order number."
+}

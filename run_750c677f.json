@@ -1,0 +1,57 @@
+{
+  "run_id": "run_750c677f",
+  "session_id": "test",
+  "timestamp": "2026-09-18T07:03:41.494606+00:00",
+  "user_query": "What is pricing?",
+  "status": "PASS",
+  "errors": [],
+  "context_engineering": {
+    "original_tokens": 4,
+    "final_tokens": 5,
+    "recent_messages": 0,
+    "old_messages": 0,
+    "summary_generated": false,
+    "historical_matches": 0,
+    "messages_removed": 0,
+    "compression_ratio": -0.25,
+    "budget": 6000
+  },
+  "retrieval": {
+    "query": "What is pricing?",
+    "top_k": 3,
+    "documents": [
+      {
+        "source": "pricing.md",
+        "text": "# Pricing\nThe Starter plan costs $19 per workspace per month. The Team plan costs $79 per workspace per month.\n",
+        "score": 1.0
+      }
+    ],
+    "mode": "pinecone",
+    "latency_ms": 0.96,
+    "pinecone_index": "glassbox"
+  },
+  "llm_calls": [
+    {
+      "answer": "Based on the available evidence: The Starter plan costs $19 per workspace per month. The Team plan costs $79 per workspace per month.",
+      "model": "offline-fallback",
+      "provider_error": null,
+      "input_tokens": 85,
+      "output_tokens": 28,
+      "total_tokens": 113,
+      "latency_ms": 0.07,
+      "cost": 2.95e-05,
+      "mode": "offline-fallback"
+    }
+  ],
+  "validation": {
+    "grounded": true,
+    "evidence_count": 1,
+    "unsupported_claims": [],
+    "conflicts": [],
+    "status": "PASS"
+  },
+  "metrics": {
+    "latency_ms": 8.26
+  },
+  "final_answer": "Based on the available evidence: The Starter plan costs $19 per workspace per month. The Team plan costs $79 per workspace per month."
+}

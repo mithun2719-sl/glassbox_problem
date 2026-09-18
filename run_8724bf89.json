@@ -1,0 +1,53 @@
+{
+  "run_id": "run_8724bf89",
+  "session_id": "test",
+  "timestamp": "2026-09-18T07:03:41.464208+00:00",
+  "user_query": "What will the company revenue be in 2030?",
+  "status": "FAIL",
+  "errors": [],
+  "context_engineering": {
+    "original_tokens": 9,
+    "final_tokens": 10,
+    "recent_messages": 0,
+    "old_messages": 0,
+    "summary_generated": false,
+    "historical_matches": 0,
+    "messages_removed": 0,
+    "compression_ratio": -0.111,
+    "budget": 6000
+  },
+  "retrieval": {
+    "query": "What will the company revenue be in 2030?",
+    "top_k": 3,
+    "documents": [],
+    "mode": "pinecone",
+    "latency_ms": 0.83,
+    "pinecone_index": "glassbox"
+  },
+  "llm_calls": [
+    {
+      "answer": "I don't have enough evidence in the available knowledge base to answer that reliably.",
+      "model": "offline-fallback",
+      "provider_error": null,
+      "input_tokens": 61,
+      "output_tokens": 17,
+      "total_tokens": 78,
+      "latency_ms": 0.04,
+      "cost": 1.94e-05,
+      "mode": "offline-fallback"
+    }
+  ],
+  "validation": {
+    "grounded": false,
+    "evidence_count": 0,
+    "unsupported_claims": [
+      "No supporting evidence"
+    ],
+    "conflicts": [],
+    "status": "FAIL"
+  },
+  "metrics": {
+    "latency_ms": 8.47
+  },
+  "final_answer": "I don't have enough evidence in the available knowledge base to answer that reliably."
+}

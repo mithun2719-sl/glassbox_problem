@@ -1,0 +1,59 @@
+{
+  "run_id": "run_7197ac9c",
+  "session_id": "stress-test",
+  "timestamp": "2026-09-18T07:00:22.352242+00:00",
+  "user_query": "Unrelated planning note 12: discuss scheduling.",
+  "status": "FLAGGED",
+  "errors": [],
+  "context_engineering": {
+    "original_tokens": 1505,
+    "final_tokens": 395,
+    "recent_messages": 6,
+    "old_messages": 116,
+    "summary_generated": true,
+    "historical_matches": 44,
+    "messages_removed": 112,
+    "compression_ratio": 0.738,
+    "budget": 6000
+  },
+  "retrieval": {
+    "query": "Unrelated planning note 12: discuss scheduling.",
+    "top_k": 3,
+    "documents": [],
+    "mode": "pinecone",
+    "latency_ms": 8.26,
+    "pinecone_index": "glassbox"
+  },
+  "llm_calls": [
+    {
+      "answer": "I don't have enough evidence in the available knowledge base to answer that reliably.",
+      "model": "offline-fallback",
+      "provider_error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+      "input_tokens": 447,
+      "output_tokens": 17,
+      "total_tokens": 464,
+      "latency_ms": 323.08,
+      "cost": 2.37e-05,
+      "mode": "offline-fallback"
+    }
+  ],
+  "validation": {
+    "grounded": false,
+    "evidence_count": 0,
+    "unsupported_claims": [
+      "No supporting evidence"
+    ],
+    "conflicts": [],
+    "status": "FAIL"
+  },
+  "metrics": {
+    "input_tokens": 447,
+    "output_tokens": 17,
+    "total_tokens": 464,
+    "cost": 2.37e-05,
+    "latency_ms": 339.25,
+    "retrieval_calls": 1,
+    "llm_calls": 1
+  },
+  "final_answer": "I don't have enough evidence in the available knowledge base to answer that reliably."
+}

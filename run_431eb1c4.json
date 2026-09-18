@@ -1,0 +1,59 @@
+{
+  "run_id": "run_431eb1c4",
+  "session_id": "stress-test",
+  "timestamp": "2026-09-18T07:00:19.704400+00:00",
+  "user_query": "Our project uses Python.",
+  "status": "FLAGGED",
+  "errors": [],
+  "context_engineering": {
+    "original_tokens": 1013,
+    "final_tokens": 371,
+    "recent_messages": 6,
+    "old_messages": 76,
+    "summary_generated": true,
+    "historical_matches": 3,
+    "messages_removed": 73,
+    "compression_ratio": 0.634,
+    "budget": 6000
+  },
+  "retrieval": {
+    "query": "Our project uses Python.",
+    "top_k": 3,
+    "documents": [],
+    "mode": "pinecone",
+    "latency_ms": 0.78,
+    "pinecone_index": "glassbox"
+  },
+  "llm_calls": [
+    {
+      "answer": "I don't have enough evidence in the available knowledge base to answer that reliably.",
+      "model": "offline-fallback",
+      "provider_error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+      "input_tokens": 423,
+      "output_tokens": 17,
+      "total_tokens": 440,
+      "latency_ms": 274.11,
+      "cost": 2.25e-05,
+      "mode": "offline-fallback"
+    }
+  ],
+  "validation": {
+    "grounded": false,
+    "evidence_count": 0,
+    "unsupported_claims": [
+      "No supporting evidence"
+    ],
+    "conflicts": [],
+    "status": "FAIL"
+  },
+  "metrics": {
+    "input_tokens": 423,
+    "output_tokens": 17,
+    "total_tokens": 440,
+    "cost": 2.25e-05,
+    "latency_ms": 284.01,
+    "retrieval_calls": 1,
+    "llm_calls": 1
+  },
+  "final_answer": "I don't have enough evidence in the available knowledge base to answer that reliably."
+}
